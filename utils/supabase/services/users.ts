@@ -1,6 +1,5 @@
 import type { Profile } from '@/utils/supabase/types';
 
-
 import BaseDbService from './BaseDbService';
 
 interface ProfileWithEmail extends Partial<Profile> {
@@ -9,7 +8,7 @@ interface ProfileWithEmail extends Partial<Profile> {
 
 interface UserWithEmail {
   email: string;
-  id: string
+  id: string;
 }
 
 export default class UsersService extends BaseDbService {
@@ -29,7 +28,7 @@ export default class UsersService extends BaseDbService {
   }
 
   async fullFillWithUserEmails(profiles: Partial<Profile>[]): Promise<ProfileWithEmail[]> {
-    const uniqueIds = Array.from(new Set(profiles.map((p) => p.id))) as string[];
+    const uniqueIds = Array.from(new Set(profiles.map(p => p.id))) as string[];
     const { data, error } = await this.supabase.rpc('get_user_emails_by_ids', { user_ids: uniqueIds });
 
     if (error) {
@@ -42,9 +41,9 @@ export default class UsersService extends BaseDbService {
       }),
     );
 
-    return profiles.map((p) => ({
+    return profiles.map(p => ({
       ...p,
-      email: usersMap.get(p.id) ?? ''
+      email: usersMap.get(p.id) ?? '',
     })) as ProfileWithEmail[];
   }
 }

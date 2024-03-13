@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const today = new Date();
   const productService = new ProductsService(createBrowserClient());
-  const currentWeek = await productService.getWeekNumber(today, 2) - 1;
+  const currentWeek = (await productService.getWeekNumber(today, 2)) - 1;
 
   const tools = await cache.get(
     `past-week-tools-api-${today.getFullYear()}-${currentWeek}-${limit}`,
@@ -22,8 +22,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   console.log(tools);
 
-  res.json(tools.map(i => ({
-    ...i,
-    products: i.products.map(simpleToolApiDtoFormatter),
-  })));
+  res.json(
+    tools.map(i => ({
+      ...i,
+      products: i.products.map(simpleToolApiDtoFormatter),
+    })),
+  );
 }

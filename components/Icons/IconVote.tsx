@@ -1,4 +1,4 @@
-import mergeTW from '@/utils/mergeTW'
+import mergeTW from '@/utils/mergeTW';
 
 export const IconVote = ({ className = '' }: { className?: string }) => (
   <svg className={mergeTW(`w-5 h-5 ${className}`)} viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -7,17 +7,10 @@ export const IconVote = ({ className = '' }: { className?: string }) => (
       fill="currentColor"
     />
     <defs>
-      <linearGradient
-        id="paint0_linear_2861_8660"
-        x1="12.761"
-        y1="4.02686"
-        x2="12.9998"
-        y2="46.5"
-        gradientUnits="userSpaceOnUse"
-      >
+      <linearGradient id="paint0_linear_2861_8660" x1="12.761" y1="4.02686" x2="12.9998" y2="46.5" gradientUnits="userSpaceOnUse">
         <stop stopColor="#CBD5E1" />
         <stop offset="1" stopColor="#CBD5E1" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>
-)
+);

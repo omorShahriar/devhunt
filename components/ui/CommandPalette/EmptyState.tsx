@@ -8,11 +8,7 @@ export default () => (
       stroke="currentColor"
       className="w-6 h-6 mx-auto"
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
     </svg>
     <h4 className="font-medium">No results found</h4>
     <p className="text-slate-400">No products found for this search term.</p>
@@ -20,4 +16,4 @@ export default () => (
       Find more tools
     </a>
   </div>
-)
+);

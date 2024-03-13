@@ -29,14 +29,13 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser. **Done!**
 
-
 ## Getting Started
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ### Restore Supabase Dump
 
-1. Create a [Supabase Project](https://supabase.com/dashboard/projects) and make sure to save the database password. 
+1. Create a [Supabase Project](https://supabase.com/dashboard/projects) and make sure to save the database password.
 2. Then navigate to `Project Settings` -> `Database Settings` -> `Connection Info`
 3. Copy the `Host` value, which should look like `db.<ReferenceID>.supabase.co`
 
@@ -59,13 +58,15 @@ SUPABASE_SERVICE_ROLE_KEY=<Your_Service_Role_Key>
 ```
 
 You can find the key values here:
-1. `<Your_Project_URL>` -  Navigate to `Project Settings` -> `API` -> `Project URL` and copy the `URL`
+
+1. `<Your_Project_URL>` - Navigate to `Project Settings` -> `API` -> `Project URL` and copy the `URL`
 2. `<Your_Anonymous_Key>` - Go to `Project Settings` -> `API` -> `Project API keys` and find the `anon` `public` key.
 3. `<Your_Service_Role_Key>` - Under `Project Settings` -> `API` -> `Project API keys` locate the `service_role` `secret` key.
 
 ### Set Up Social Login (OAuth)
 
 To enable social login features, follow the guides below for each platform:
+
 - **GitHub login**: Simply configure your Supabase settings. For detailed instructions, refer to the Supabase [GitHub OAuth Guide](https://supabase.com/docs/guides/auth/social-login/auth-github) - you need only to configure Supabase
 - **Google login**: Follow the steps outlined in the Supabase [Google OAuth Guide](https://supabase.com/docs/guides/auth/social-login/auth-google)
 - **More Providers**: For a complete list of all available social login methods, consult the [Supabase Social Login](https://supabase.com/docs/guides/auth/social-login) documentation
@@ -102,6 +103,6 @@ Are you interested in contributing to DEVHUNT, please read our [contributing gui
 
 ## Forking and Cloning
 
-You are free to fork and clone it as long as you clearly reffer to the original project. 
-If it's a github, then refer to https://github.com/MarsX-dev/devhunt 
+You are free to fork and clone it as long as you clearly reffer to the original project.
+If it's a github, then refer to https://github.com/MarsX-dev/devhunt
 If it's a website, then refer to devhunt.org with a prominent logo and a link.

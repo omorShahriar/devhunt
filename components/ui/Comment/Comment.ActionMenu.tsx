@@ -1,18 +1,18 @@
-'use client'
+'use client';
 
-import { IconEllipsisVertical } from '@/components/Icons'
-import { ReactNode, useEffect, useRef, useState } from 'react'
+import { IconEllipsisVertical } from '@/components/Icons';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 
 export const CommentActionMenu = ({ children }: { children: ReactNode }) => {
-  const [state, setState] = useState(false)
-  const menuBtnRef = useRef<HTMLButtonElement>(null)
+  const [state, setState] = useState(false);
+  const menuBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleDropDown = (e: MouseEvent) => {
-      if (menuBtnRef.current && !(menuBtnRef.current as HTMLElement).contains(e.target as Node)) setState(false)
-    }
-    document.addEventListener('click', handleDropDown)
-  }, [])
+      if (menuBtnRef.current && !(menuBtnRef.current as HTMLElement).contains(e.target as Node)) setState(false);
+    };
+    document.addEventListener('click', handleDropDown);
+  }, []);
 
   return (
     <div className="relative">
@@ -23,13 +23,9 @@ export const CommentActionMenu = ({ children }: { children: ReactNode }) => {
       >
         <IconEllipsisVertical className="" />
       </button>
-      <ul
-        className={`bg-slate-800 top-10 right-0 absolute rounded-lg w-32 shadow-md space-y-0 overflow-hidden ${
-          state ? '' : 'hidden'
-        }`}
-      >
+      <ul className={`bg-slate-800 top-10 right-0 absolute rounded-lg w-32 shadow-md space-y-0 overflow-hidden ${state ? '' : 'hidden'}`}>
         {children}
       </ul>
     </div>
-  )
-}
+  );
+};

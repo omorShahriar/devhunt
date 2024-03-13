@@ -8,10 +8,7 @@ export default () => {
           <h3 className="text-orange-500 font-semibold">404 Error</h3>
           <p className="text-slate-50 text-4xl font-semibold sm:text-5xl">Page not found</p>
           <p className="text-slate-300">Sorry, the page you are looking for could not be found or has been removed.</p>
-          <Link
-            href="/"
-            className="text-orange-500 duration-150 hover:text-orange-400 font-medium inline-flex items-center gap-x-1"
-          >
+          <Link href="/" className="text-orange-500 duration-150 hover:text-orange-400 font-medium inline-flex items-center gap-x-1">
             Go back
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
               <path

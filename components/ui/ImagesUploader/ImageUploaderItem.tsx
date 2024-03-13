@@ -1,18 +1,10 @@
-import { IconXmark } from '@/components/Icons'
-import mergeTW from '@/utils/mergeTW'
+import { IconXmark } from '@/components/Icons';
+import mergeTW from '@/utils/mergeTW';
 
-export const ImageUploaderItem = ({
-  className = '',
-  src,
-  onRemove,
-}: {
-  className?: string
-  src: string
-  onRemove: () => void
-}) => (
+export const ImageUploaderItem = ({ className = '', src, onRemove }: { className?: string; src: string; onRemove: () => void }) => (
   <div
     className={mergeTW(
-      `relative flex-none w-full max-w-[13rem] h-36 rounded-md overflow-hidden border border-slate-700 group duration-150 ${className}`
+      `relative flex-none w-full max-w-[13rem] h-36 rounded-md overflow-hidden border border-slate-700 group duration-150 ${className}`,
     )}
   >
     <img src={src} className="w-full h-full object-cover" loading="lazy" />
@@ -24,4 +16,4 @@ export const ImageUploaderItem = ({
       <IconXmark className="w-6 h-6" />
     </button>
   </div>
-)
+);
